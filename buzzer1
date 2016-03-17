@@ -1,0 +1,125 @@
+// Nine different buzzers implemented
+
+int speakerPin=3; // PB3 D 3
+
+void setup()
+{
+pinMode(speakerPin,OUTPUT);
+
+}
+
+void loop()
+{
+
+// File Write Success
+
+for(int i=200;i>0;i--)
+{
+analogWrite(speakerPin,245);
+delayMicroseconds(500);
+analogWrite(speakerPin,0);
+delayMicroseconds(500);
+}
+
+delay(2000);
+
+//func 1 SD Card Problem
+for(int i=0;i<100;i++)
+{
+analogWrite(speakerPin,245);
+delayMicroseconds(500);
+analogWrite(speakerPin,0);
+delayMicroseconds(500);
+}
+
+delay(2000);
+
+//func 2 Sensor Not Working
+for(int i=0;i<100;i++)
+{
+analogWrite(speakerPin,245);
+delayMicroseconds(i);
+analogWrite(speakerPin,0);
+delayMicroseconds(i);
+}
+
+delay(2000);
+
+//func 3 Battery Low
+for(int i=100;i>0;i--)
+{
+analogWrite(speakerPin,245);
+delayMicroseconds(i);
+analogWrite(speakerPin,0);
+delayMicroseconds(i);
+}
+delay(2000);
+
+//func 4
+
+for(int i=100;i>0;i--)
+{
+analogWrite(speakerPin,100);
+delayMicroseconds(500);
+analogWrite(speakerPin,245);
+delayMicroseconds(500);
+analogWrite(speakerPin,100);
+delayMicroseconds(500);
+
+}
+
+delay(2000);
+//func 5
+for(int i=10;i>0;i--)
+{
+for(int j=0;j<=10;j++)
+{
+analogWrite(speakerPin,245);
+delayMicroseconds(j);
+analogWrite(speakerPin,0);
+delayMicroseconds(j);
+} }
+
+delay(2000);
+
+//func 6
+for(int i=0;i<100;i++)
+{
+analogWrite(speakerPin,245);
+delayMicroseconds(500);
+analogWrite(speakerPin,0);
+delayMicroseconds(1500);
+
+}
+delay(2000);
+
+//func 7
+for(int i=10;i>0;i--)
+{ for(int j=0;j<20;j++)
+{ analogWrite(speakerPin,245);
+delayMicroseconds(500);
+analogWrite(speakerPin,0);
+delayMicroseconds(500);}
+for(int j=0;j<20;j++)
+{
+analogWrite(speakerPin,245);
+delayMicroseconds(1500);
+analogWrite(speakerPin,0);
+delayMicroseconds(1500);
+}
+}
+
+delay(2000);
+
+//func 8
+for(int i=100;i>0;i--)
+{
+analogWrite(speakerPin,245);
+delayMicroseconds(100);
+analogWrite(speakerPin,0);
+delayMicroseconds(i);
+}
+
+delay(2000);
+
+}
